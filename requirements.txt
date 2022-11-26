@@ -234,7 +234,6 @@ python-snappy
 pytz==2021.3
 pyviz-comms
 PyWavelets
-pywinpty
 PyYAML==6.0
 pyzmq
 QDarkStyle
