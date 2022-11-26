@@ -329,7 +329,6 @@ wrap
 xarray
 xlrd
 XlsxWriter
-xlwings==0.24.9
 yapf
 yarl
 zict==2.0.0
