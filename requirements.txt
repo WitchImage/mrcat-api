@@ -258,7 +258,7 @@ Scrapy
 seaborn
 Send2Trash
 service-identity
-sip==4.19.13
+sip==5.0.0
 six
 smart-open
 sniffio
