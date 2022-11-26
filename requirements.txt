@@ -208,7 +208,6 @@ pycodestyle
 pycosat==0.6.3
 pycparser
 pyct
-pycurl==7.19.0
 PyDispatcher==2.0.5
 pydocstyle
 pyerfa
