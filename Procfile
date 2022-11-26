@@ -1,1 +1,1 @@
-web: gunicorn 'mrcatApi.wsgi'
+web: gunicorn 'mrcatApi.wsgi' --log-file -
