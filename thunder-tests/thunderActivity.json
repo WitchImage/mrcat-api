@@ -1,0 +1,161 @@
+[
+  {
+    "_id": "f788fe5d-f19b-416f-b3c2-6f852ba53d7f",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/csv",
+    "url": "127.0.0.1:8000/csv",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-19T14:15:14.127Z",
+    "modified": "2022-12-19T14:15:32.995Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "",
+          "value": "..\\..\\..\\..\\..\\Desktop\\Resultados_Censo_2018_Comunas_de_Manizales.csv"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "c5ab1ff2-121e-4e37-8ae9-fd454f4ab7c2",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/csv_to_json",
+    "url": "127.0.0.1:8000/csv_to_json",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-19T14:40:37.438Z",
+    "modified": "2022-12-19T14:40:37.438Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "",
+          "value": "..\\..\\..\\..\\..\\Desktop\\Resultados_Censo_2018_Comunas_de_Manizales.csv"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "57aaa653-804c-49a8-8daa-e51c5b417c31",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/aoi/csv_to_json",
+    "url": "127.0.0.1:8000/aoi/csv_to_json",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-19T14:40:52.942Z",
+    "modified": "2022-12-19T14:40:52.942Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "",
+          "value": "..\\..\\..\\..\\..\\Desktop\\Resultados_Censo_2018_Comunas_de_Manizales.csv"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "e7347b18-d79d-4c57-9dc8-2c404f363371",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/aoi/csv",
+    "url": "127.0.0.1:8000/aoi/csv",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-19T14:41:02.832Z",
+    "modified": "2022-12-19T14:41:02.832Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "",
+          "value": "..\\..\\..\\..\\..\\Desktop\\Resultados_Censo_2018_Comunas_de_Manizales.csv"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "147e880f-1d69-48ae-9167-90d07a7db3e9",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/api/csv",
+    "url": "127.0.0.1:8000/api/csv",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-19T14:41:15.251Z",
+    "modified": "2022-12-19T14:47:36.236Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "file",
+          "value": "..\\..\\..\\..\\..\\Desktop\\inteligentes\\iris.csv"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "225f17b1-7ceb-472d-91b4-d66f2dbadbac",
+    "colId": "history",
+    "containerId": "",
+    "name": "127.0.0.1:8000/api/analyze",
+    "url": "127.0.0.1:8000/api/analyze",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-12-19T14:49:29.669Z",
+    "modified": "2022-12-19T19:03:59.315Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "class_col",
+          "value": "1"
+        },
+        {
+          "name": "algorithm",
+          "value": "kmeans"
+        }
+      ],
+      "files": [
+        {
+          "name": "file",
+          "value": "..\\..\\..\\..\\..\\Desktop\\inteligentes\\iris.csv"
+        }
+      ]
+    },
+    "tests": []
+  }
+]
