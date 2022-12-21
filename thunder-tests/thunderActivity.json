@@ -133,7 +133,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-12-19T14:49:29.669Z",
-    "modified": "2022-12-20T05:21:59.267Z",
+    "modified": "2022-12-21T00:31:41.321Z",
     "headers": [],
     "params": [],
     "body": {
@@ -142,11 +142,11 @@
       "form": [
         {
           "name": "class_col",
-          "value": "1"
+          "value": "virginica"
         },
         {
           "name": "algorithm",
-          "value": "nbayes"
+          "value": "kmeans"
         }
       ],
       "files": [

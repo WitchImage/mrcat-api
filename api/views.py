@@ -48,7 +48,7 @@ def kmeans(dataset: Any, k: int):
     kmeans.labels_
 
     # cluster_indices = kmeans.predict([[0, 0], [12, 3]])
-    return kmeans.cluster_centers_
+    return str(kmeans.cluster_centers_)
     # print("Cluster centers:", kmeans.cluster_centers_)
 
 def nbayes(dataset: pd.DataFrame, class_col: str):
@@ -60,21 +60,21 @@ def nbayes(dataset: pd.DataFrame, class_col: str):
     y_pred = gnb.fit(X_train, y_train).predict(X_test)
     return f"Accuracy: {gnb.score(X_test, y_test)}"
     return ("Number of mislabeled points out of a total %d points : %d" % (X_test.shape[0], (y_test != y_pred).sum()))
-    print("Accuracy:", gnb.score(X_test, y_test))
+    # print("Accuracy:", gnb.score(X_test, y_test))
 
-def knn(dataset: Any, k: int, distance: Literal["manhattan", "euclidean"] = "euclidean"):
+def knn(dataset: pd.DataFrame, class_col: str, k: int, distance: Literal["manhattan", "euclidean"] = "euclidean"):
     distances = {"manhattan": 1, "euclidean": 2}
     d = distances[distance]
-    X, y = dataset.data, dataset.target
+    X, y = dataset.drop(class_col, axis=1), dataset.iloc[:, -1:]
     neigh = KNeighborsClassifier(n_neighbors=k, metric=d)
     neigh.fit(X, y)
-    return(neigh.predict([[1, 1]]))
+    # return(neigh.predict([[1, 1]]))
 
-def svm(dataset: Any):
-    X, y = dataset.data, dataset.target
+def svm(dataset: pd.DataFrame, class_col: str):
+    X, y = dataset.drop(class_col, axis=1), dataset.iloc[:, -1:]
     clf = SVC()
     clf.fit(X, y)
-    print(clf.predict([[1, 1]]))
+    # print(clf.predict([[1, 1]]))
     return f"support vectors: {clf.support_vectors_}"
     # print("number of supports vectors for each class: ", clf.n_support_)
 
@@ -90,11 +90,11 @@ def load_dataset(dataset: Literal["boston", "iris", "cancer", "wine"]):
 
 def call_method(method: str, dataset: pd.DataFrame, class_col: str):
     dataset.reset_index(drop=True, inplace=True)
-    if method == "id3": return id3(dataset)
+    if method == "id3": return id3(dataset, class_col)
     elif method == "kmeans": return kmeans(dataset, 2)
     elif method == "nbayes": return nbayes(dataset, class_col)
-    elif method == "knn": return knn(dataset, 2)
-    elif method == "svm": return svm(dataset)
+    elif method == "knn": return knn(dataset, class_col, 2)
+    elif method == "svm": return svm(dataset, class_col)
 
 def index(request):
     versions = f'sklearn version: {sklearn.__version__} - tensorflow version: {tensorflow.__version__}'
@@ -110,5 +110,5 @@ def analyze(request: WSGIRequest) -> JsonResponse:
     res = call_method(algorithm, df, class_col)
     print('Response', res)
 
-    response = json.loads(res)
-    return JsonResponse(response, status=200, safe=False)
+    # response = json.loads(res)
+    return JsonResponse(res, status=200, safe=False)
